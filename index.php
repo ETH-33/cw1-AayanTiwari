@@ -39,10 +39,10 @@
   </script>
   <hr>
   <section class="section1">
-    <div class="left-column">
+    <div class="col1">
       <img src="img/logo-white.png" alt="Logo">
     </div>
-    <div class="right-column">
+    <div class="col2">
       <div class="best-sale">
         <h2>Best Seller</h2>
       </div>
@@ -57,7 +57,7 @@
   <a href="shop.php"><button class="shbtn">Go To Store</button></a>
   </div>
   <section class="section2">
-    <div class="left-column">
+    <div class="col1">
     <h2>About Us</h2>
     <p>
     Welcome to Online Store, your premier online shopping destination.
@@ -65,7 +65,7 @@
     Discover a wide range of apparel from various brands, all available at your fingertips. <br>
     Experience the joy of online shopping with Online Store. Shop now and discover a world of convenience, quality, and endless possibilities.</p>
     </div>
-    <div class="right-column">
+    <div class="col2">
     <img src="img/building.jpg" alt="Building">
     </div>
   </section>
