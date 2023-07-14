@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<?php
+		$Username = null;
+		$Role = $_GET["r"];
+		if(!empty($_SESSION["Username"]))
+		{
+			$Username = $_SESSION["Username"];
+		}
+	?>
 </head>
 
 <body>
@@ -15,6 +24,8 @@
       <li><a href="index.php">Home</a></li>
       <li><a href="shop.php">Shop</a></li>
       <li><a href="#"><span id="darkModeButton" onclick="toggleDarkMode()">Change Theme</span></a></li>
+      <?php if($Username == null){echo '<li><a href="register.php?actiontype=register">Register</a></li>';} ?>
+			<?php if($Username == null){echo '<li><a href="login.php?r=5921b8e471bdd8a0b4348dfecd31620b">Login</a></li>';} else {echo '<li><a href="Logout.php">Logout</a></li>';} ?>
     </ul>
     <script>
     var isDarkModeEnabled = localStorage.getItem("darkModeEnabled");
