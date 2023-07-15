@@ -53,7 +53,7 @@
   <div class="lg-con">
   <div class="log-con">
     <h2>Login</h2>
-    <form>
+    <form role="form" action="logindestination.php?r=<?php echo $Role; ?>" method="POST">
       <label for="Username">Username</label>
       <input type="text" id="Username" name="Username" placeholder="Enter your username" pattern="[a-zA-Z0-9_]{3,20}" required>
       <label for="Password">Password</label>
