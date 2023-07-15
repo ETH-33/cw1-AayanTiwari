@@ -73,7 +73,7 @@
 <input type="text" id="Lastname" name="Lastname" placeholder="Enter your last name" pattern="[A-Za-z]{1,50}" title="Last name must contain only letters (1-50 characters)" required>
 
 <label for="Address">Address</label>
-<input type="text" id="Address" name="Address" placeholder="Enter your address" required>
+<input type="text" id="Address" name="Address" placeholder="Enter your address" pattern="[a-zA-Z0-9_]{3,20}" required>
 
 <label for="EmailAddress">Email</label>
 <input type="email" id="EmailAddress" name="EmailAddress" placeholder="Enter your email address" required>
