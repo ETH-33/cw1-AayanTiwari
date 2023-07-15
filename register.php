@@ -1,12 +1,27 @@
+<?php 
+  session_start(); 
+	$ActionType = $_GET['actiontype'];
+	if($ActionType == "edit"){
+		$ID = $_GET['ID'];
+		$Loc = $_GET['loc'];
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register</title>
+  <title><?php if($ActionType == "register"){echo "Register an Accout";}else echo "Edit Account Information"; ?></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <?php
+		$Username = null;
+		if(!empty($_SESSION["Username"]))
+		{
+			$Username = $_SESSION["Username"];
+		}
+	?>
 </head>
 
 <body>
@@ -15,6 +30,8 @@
       <li><a href="index.php">Home</a></li>
       <li><a href="shop.php">Shop</a></li>
       <li><a href="#"><span id="darkModeButton" onclick="toggleDarkMode()">Change Theme</span></a></li>
+      <?php if($Username == null){echo '<li><a href="register.php?actiontype=register">Register</a></li>';} ?>
+			<?php if($Username == null){echo '<li><a href="login.php?r=5921b8e471bdd8a0b4348dfecd31620b">Login</a></li>';} else {echo '<li><a href="Logout.php">Logout</a></li>';} ?>
     </ul>
     <script>
     var isDarkModeEnabled = localStorage.getItem("darkModeEnabled");
@@ -41,6 +58,7 @@
   </script>
   <div class="rg-con">
   <div class="reg-con">
+  <h2><?php if($ActionType == "register"){echo "Register";}else echo "Edit Account Information"; ?></h2>
 <form>
 <label for="Username">Username</label>
 <input type="text" id="Username" name="Username" placeholder="Enter your username" pattern="[a-zA-Z0-9_]{3,20}" title="Username must contain only letters, numbers, or underscores (3-20 characters)" required>
