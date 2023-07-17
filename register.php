@@ -9,6 +9,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php if($ActionType == "register"){echo "Register an Accout";}else echo "Edit Account Information"; ?></title>
