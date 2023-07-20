@@ -36,9 +36,9 @@
 <body>
   <nav>
     <ul class="nav-links">
-					<li><a href="management_orders.php">Orders</a></li>
-					<li><a href="management_products.php?productaction=add">Products</a></li>
-					<li><a href="management_productslist.php">Product List</a></li>
+	  <li><a href="management_orders.php">Orders</a></li>
+	  <li><a href="management_products.php?productaction=add">Products</a></li>
+	  <li><a href="management_productslist.php">Product List</a></li>
           <li><a href="management_customers.php">Customers</a></li>
           <li><a href="#"><span id="darkModeButton" onclick="toggleDarkMode()">Change Theme</span></a></li>
           <li><a href="logout.php">Logout</a></li>
@@ -80,31 +80,30 @@
       <th>Action</th>
     </tr>
     <?php 
-								require 'connection.php';
-								$sqlI = "SELECT tbl_orders.OrderID, tbl_orders.CustomerID, tbl_products.Productname, tbl_products.ProductBrand, tbl_orders.Size, " .
-								" tbl_orders.Color, tbl_products.ProductPrice, tbl_orders.DateOrdered FROM tbl_products RIGHT JOIN " .
-								" tbl_orders on tbl_orders.ProductID = tbl_products.ProductID ORDER BY tbl_orders.OrderID";
-								$Resulta = mysqli_query($Conn,$sqlI);
-								while($Rows = mysqli_fetch_array($Resulta)):; 
-								?>
-								<tr>
-								<td><?php echo $Rows[0]; ?></td>
-								<td><?php echo $Rows[1]; ?></td>
-								<td><?php echo $Rows[2]; ?></td>
-								<td><?php echo $Rows[3]; ?></td>
-								<td><?php echo $Rows[4]; ?></td>
-							 	<td><?php echo $Rows[5]; ?></td>
-								<td><?php echo $Rows[6]; ?></td>
-								<td><?php echo $Rows[7]; ?></td>
-								<td>
-								<a href="#" onclick="CancelOrderOnclick(<?php echo $Rows[0]; ?>);">Delete</a>
-								</td>
-								<?php endwhile; ?>
-								</tr>
+	require 'connection.php';
+	$sqlI = "SELECT tbl_orders.OrderID, tbl_orders.CustomerID, tbl_products.Productname, tbl_products.ProductBrand, tbl_orders.Size, " .
+	" tbl_orders.Color, tbl_products.ProductPrice, tbl_orders.DateOrdered FROM tbl_products RIGHT JOIN " .
+	" tbl_orders on tbl_orders.ProductID = tbl_products.ProductID ORDER BY tbl_orders.OrderID";
+	$Resulta = mysqli_query($Conn,$sqlI);
+	while($Rows = mysqli_fetch_array($Resulta)):; 
+	?>
+	<tr>
+	<td><?php echo $Rows[0]; ?></td>
+	<td><?php echo $Rows[1]; ?></td>
+	<td><?php echo $Rows[2]; ?></td>
+	<td><?php echo $Rows[3]; ?></td>
+	<td><?php echo $Rows[4]; ?></td>
+	<td><?php echo $Rows[5]; ?></td>
+	<td><?php echo $Rows[6]; ?></td>
+	<td><?php echo $Rows[7]; ?></td>
+	<td>
+	<a href="#" onclick="CancelOrderOnclick(<?php echo $Rows[0]; ?>);">Delete</a>
+	</td>
+	<?php endwhile; ?>
+	</tr>
   </table>
   </div>
   </section>
   <footer>Designed and built by Aayan Tiwari</footer>
 </body>
-
 </html>
