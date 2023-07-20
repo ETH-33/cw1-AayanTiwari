@@ -73,14 +73,12 @@
   <div class="log-con">
     <h2>Order</h2>
     <form role="form" action="orderaction.php?productID=<?php echo $ProductID; ?>&customerID=<?php echo $CustomerID; ?>" method="POST">
-    <label for="ProductID">Product ID:</label>
-    <input type="text" id="ProductID" name="ProductID" value="<?php echo $ProductID; ?>" disabled>
-    <label for="CustomerID">Customer ID:</label>
-    <input type="text" id="CustomerID" name="CustomerID" value="<?php echo $CustomerID; ?>" disabled>
+    <input type="text" id="ProductID" name="ProductID" value="<?php echo $ProductID; ?>" disabled hidden>
+    <input type="text" id="CustomerID" name="CustomerID" value="<?php echo $CustomerID; ?>" disabled hidden>
     <label for="ProductColor">Product Color:</label>
-    <input type="text" id="ProductColor" name="ProductColor" required>
+    <input type="text" id="ProductColor" name="ProductColor" required pattern="[A-Za-z]{1,50}">
     <label for="ProductSize">Product Size:</label>
-    <input type="text" id="ProductSize" name="ProductSize"  required>
+    <input type="text" id="ProductSize" name="ProductSize"  required pattern="^\d+$">
     <button type="submit">Order</button>
   </form>
   </div>
