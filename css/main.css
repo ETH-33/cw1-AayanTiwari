@@ -190,3 +190,63 @@ body {
     position: relative;
     margin: 40px 0;
   }
+@media (max-width: 768px) {
+        nav ul {
+          display: none;
+        }
+        .apparel, .product{
+          flex-direction: column;
+          display: block;
+        }
+        nav ul li{
+          margin: 10px;
+        }
+        nav ul li a:hover {
+        border-bottom: none;
+        }
+        .burger-menu {
+          display: block;
+          cursor: pointer;
+          padding: 10px;
+          transition: transform 0.3s ease-in-out;
+        }
+  
+        .burger-menu div {
+          width: 25px;
+          height: 3px;
+          background-color: #333;
+          margin: 5px;
+          transition: background-color 0.3s ease-in-out;
+        }
+  
+        .burger-menu.active div {
+          background-color: #fff;
+        }
+  
+        .nav-active {
+          display: flex !important;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px;
+          animation: slideIn 0.4s ease-in;
+        }
+        @keyframes slideIn {
+          from {
+            transform: translateX(-100%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+        .section1 .col1 img, .section2 .col2 img{
+          width: 100%;
+        }
+        .section1, .section2 {
+            flex-direction: column;
+          }
+    
+          .section1 .col1,
+          .section1 .col2, .section2 .col1, .section2 .col2 {
+            margin-right: 0;
+          }
+      }
