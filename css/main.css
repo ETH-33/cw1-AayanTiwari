@@ -1,1 +1,192 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .info{
+    text-align: center;
+    background-color: #c7c7c7;
+    padding: 1%;
+  }
+  nav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-right: 10px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+  }
+
+  nav ul li a:hover {
+    border-bottom: 1px solid #000000;
+  }
+
+  .lg-con,.rg-con{
+    margin-top: 100px;
+  }
+
+  .dark-mode .log-con,.dark-mode .reg-con{
+    background-color: white;
+    color: black;
+  }
+  .log-con, .reg-con{
+    background-color: black;
+    color: white;
+  }
+  .log-con, .reg-con {
+    border-radius: 5px;
+    padding: 50px;
+    width: 300px;
+    margin: auto;
+  }
+
+  .log-con h2 , .reg-con h2{
+    margin-top: 0;
+  }
+
+  .log-con form ,.reg-con form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .log-con label , .reg-con label{
+    margin-bottom: 5px;
+  }
+
+  .log-con input[type="text"],
+  .log-con input[type="password"],
+  .reg-con input[type="text"],
+  .reg-con input[type="password"],
+  .reg-con input[type="email"] {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .log-con button, .reg-con button, .shbtn{
+    padding: 10px;
+    background-color: #6c77f5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+
+  .log-con button:hover, .reg-con button:hover, .shbtn:hover {
+    background-color: #555;
+  }
+
+  .best-sale {
+    padding: 20px;
+  }
+
+  .best-sale h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .best-sale .product {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .best-sale .product img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  .best-sale .product .details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .best-sale .product .details h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .best-sale .product .details p {
+    margin: 5px 0;
+  }
+
+  .best-sale .product .details .btn {
+    margin-top: 10px;
+  }
+  .section1, .section2 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .contact{
+    padding: 20px;
+  }
+  .section1 .col1, .section2 .col2{
+    flex: 1;
+    text-align: center;
+  }
+  .section2 .col1, .section1 .col2, .section2 .col2 {
+    flex:1;
+  }
+  .best-sale h2, .info h1{
+    text-transform: uppercase;
+  }
+  .dark-mode{
+    background-color: black;
+    color: white;
+  }
+  .dark-mode a ,.dark-mode footer{
+    color: white;
+  }
+  .section1 .col1 img, .section2 .col2 img{
+    width:50%;
+    border-radius: 10px;
+  }
+  .dark-mode .col1 img{
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+  }
+  .apparel{
+    display: flex;
+    padding: 5%;
+    justify-content: space-between;
+  }
+  .apparel img{
+    width: 250px;
+    height: 250px;
+  }
+  .col1 img{
+    -webkit-filter: brightness(0%);
+    filter: brightness(0%);
+  }
+  .dark-mode a ,.dark-mode footer{
+    color: white;
+  }
+  .dark-mode .info{
+    color: black;
+  }
+  .dark-mode ul li a:hover{
+    border-bottom: 1px solid white;
+  }
+    footer{
+    text-align: center;
+    bottom: 0;
+    position: relative;
+    margin: 40px 0;
+  }
