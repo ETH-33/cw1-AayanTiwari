@@ -61,7 +61,7 @@
   <div class="rg-con">
   <div class="reg-con">
   <h2><?php if($ActionType == "register"){echo "Register";}else echo "Edit Account Information"; ?></h2>
-<form>
+<form role="form" action="registeraction.php?actiontype=<?php echo $ActionType; if($ActionType == "edit"){ echo "&loc=" . $Loc . "&ID=" .$ID;} ?>" method="POST">
 <label for="Username">Username</label>
 <input type="text" id="Username" name="Username" placeholder="Enter your username" pattern="[a-zA-Z0-9_]{3,20}" title="Username must contain only letters, numbers, or underscores (3-20 characters)" required>
 
